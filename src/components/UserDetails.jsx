@@ -1,7 +1,15 @@
 import React from "react";
 import DeleteAllUser from "./DeleteAllUser";
-
+import { fakeUserData } from "../api";
+import { useDispatch } from "react-redux";
+import { addUser } from "../store/slices/UserSlice";
 const UserDetails = () => {
+  const dispatch = useDispatch();
+
+  const addddUser = (name) => {
+    console.log(name);
+    dispatch(addUser(name));
+  };
   return (
     <div className=" w-[650px] my-5 ">
       <div className="flex w-full justify-between">
@@ -9,7 +17,12 @@ const UserDetails = () => {
           List Of User Details
         </h3>
         <div>
-          <button className="bg-gradient-to-r text-white py-2 px-5 from-cyan-500 to-blue-500 ">
+          <button
+            onClick={() => {
+              addddUser(fakeUserData());
+            }}
+            className="bg-gradient-to-r text-white py-2 px-5 from-cyan-500 to-blue-500 "
+          >
             Add New User
           </button>
         </div>

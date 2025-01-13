@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import store from './store/Store.jsx'
 import App from './App.jsx'
-import { ApiProvider } from '@reduxjs/toolkit/query/react'
+import { Provider } from 'react-redux'
 
 createRoot(document.getElementById('root')).render(
-  <ApiProvider store={store}>
+  <Provider store={store}>
     <App />
-  </ApiProvider>,
+  </Provider>,
 )

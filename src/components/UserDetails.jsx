@@ -3,6 +3,7 @@ import DeleteAllUser from "./DeleteAllUser";
 import { fakeUserData } from "../api";
 import { useDispatch } from "react-redux";
 import { addUser } from "../store/slices/UserSlice";
+import DisplayUser from "./DisplayUser";
 const UserDetails = () => {
   const dispatch = useDispatch();
 
@@ -28,8 +29,7 @@ const UserDetails = () => {
         </div>
       </div>
       <div className="py-3">
-        <h3 className="text-white">Hii</h3>
-        <h3 className="text-white">Hii</h3>
+        <DisplayUser />
       </div>
       <hr className="border-b-  border-white" />
       <DeleteAllUser />

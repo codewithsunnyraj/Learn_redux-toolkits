@@ -9,5 +9,6 @@ const UserSlice = createSlice({
     deleteUsers(state, action) {},
   },
 });
+console.log(UserSlice);
 
-export {UserSlice};
+export default UserSlice.reducer;

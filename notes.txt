@@ -1,0 +1,7 @@
+1.  deleteUsers(state, action) {}, why here we use state and action in reducers of create   slice?
+
+Why Are They Used in Reducers?
+The reducer needs:
+
+state: To know the current state so it can decide how to update it.
+action: To understand what change is requested and to access any additional data required for the update (e.g., user ID).

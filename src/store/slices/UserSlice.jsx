@@ -6,12 +6,16 @@ const UserSlice = createSlice({
   reducers: {
     addUser(state, action) {
       console.log(state); //empty
-      console.log(action); /** the action contain two thing one is PAYLOAD and another is TYPE */
+      console.log(
+        action
+      ); /** the action contain two thing one is PAYLOAD and another is TYPE */
       state.push(action.payload);
       console.log(state);
       console.log(action.payload);
     },
-    removeUser(state, action) {},
+    removeUser(state, action) {
+      state.splice(action.payload, 1);
+    },
     deleteUsers(state, action) {},
   },
 });

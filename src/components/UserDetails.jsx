@@ -12,27 +12,29 @@ const UserDetails = () => {
     dispatch(addUser(name));
   };
   return (
-    <div className=" w-[650px] my-5 ">
-      <div className="flex w-full justify-between">
-        <h3 className="font-semibold text-xl text-slate-500">
-          List Of User Details
-        </h3>
-        <div>
-          <button
-            onClick={() => {
-              addddUser(fakeUserData());
-            }}
-            className="bg-gradient-to-r text-white py-2 px-5 from-cyan-500 to-blue-500 "
-          >
-            Add New User
-          </button>
+    <div className="w-full">
+      <div className=" w-full  my-5 ">
+        <div className="flex w-full justify-between">
+          <h3 className="font-semibold text-xl text-slate-500">
+            List Of User Details
+          </h3>
+          <div>
+            <button
+              onClick={() => {
+                addddUser(fakeUserData());
+              }}
+              className="bg-gradient-to-r text-white py-2 px-5 from-cyan-500 to-blue-500 "
+            >
+              Add New User
+            </button>
+          </div>
         </div>
+        <div className="py-3">
+          <DisplayUser />
+        </div>
+        <hr className="border-b-  border-white" />
+        <DeleteAllUser />
       </div>
-      <div className="py-3">
-        <DisplayUser />
-      </div>
-      <hr className="border-b-  border-white" />
-      <DeleteAllUser />
     </div>
   );
 };
